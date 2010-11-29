@@ -98,9 +98,12 @@ end
 
 class MSBuildRunner
 	def self.compile(attributes)
+		version = attributes.fetch(:clrversion, 'v3.5')
 		compile_target = attributes.fetch(:compile_target, 'debug')
-    solution_file = attributes[:solution_file]
-		msbuild_file = 'xbuild'
+	    solution_file = attributes[:solution_file]
+		
+		framework_dir = File.join(ENV['WINDIR'].dup, 'Microsoft.NET', 'Framework', 'v3.5')
+		msbuild_file = File.join(framework_dir, 'msbuild.exe')
 		
 		sh "#{msbuild_file} #{solution_file} /property:Configuration=#{compile_target} /t:Rebuild"
 	end
