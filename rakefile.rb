@@ -12,7 +12,7 @@ end
 local_settings = LocalSettings.new
 mspec_options = []
 output_folders = [Project.startup_dir,Project.specs_dir]
-solution_file = "solution#{local_settings[:use_vs2010] ? ".vs2010":""}.sln"
+solution_file = "solution.sln"
 
 COMPILE_TARGET = 'debug'
 CLEAN.include(File.join(Project.startup_dir,"*.*"))
