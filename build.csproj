@@ -52,7 +52,6 @@
   <ItemGroup>
     <None Include="build\build_utilities.rb" />
     <None Include="build\local_properties.rb" />
-    <None Include="build\local_properties.rb.customize" />
     <None Include="build\project.rb" />
     <None Include="build\tools\Gallio\v3.1.397\Gallio.Echo.exe.config" />
     <None Include="build\tools\Gallio\v3.1.397\Gallio.Echo.plugin" />
